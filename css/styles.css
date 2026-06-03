@@ -71,10 +71,10 @@ section {
   justify-content: center;
 }
 section div {
-  width: 33%;
-  height: 350px;
+  width: 300px;
+  height:170px;
   background-color: yellow;
-  margin-left: 1px;
+  margin: 5px;
 }
 #intro {
   background-image: url(https://i.pinimg.com/736x/be/47/74/be47743249f0e88d93da0e17520681fd.jpg);
@@ -86,23 +86,29 @@ background-position: center;
   border-radius: 15px;
 }
 #eeuu {
-  background-image: url(https://static.vecteezy.com/system/resources/previews/001/233/168/non_2x/united-states-of-america-flag-vector.jpg);
+  background-image: url(../img/banderaeeuu\ \(1\).png);
+  background-repeat: no-repeat;
   background-size: cover;
 }
 #mx {
-  background-image: url(https://cdn0.uncomo.com/es/posts/6/1/8/significado_de_la_bandera_y_el_escudo_de_mexico_44816_orig.jpg);
-  background-size: cover;
+  background-image: url(../img/banderamex.png);
   background-repeat: no-repeat;
-  background-position: center;
+  background-size: cover;
 }
 #can {
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqRwZF-nsN4G1ENmU7eBbVlZlCtUmSlblpMg&amp;s);
-  background-size: cover;
+  background-image: url(../img/banderacan.svg);
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
 }
 
 /*fin main*/
+/*comienzo de estadios*/
+table, td, th{
+  background-color: solid red 8px;
+}
+
+
 /*inicio del footer*/
 footer {
   background-color: #000;
