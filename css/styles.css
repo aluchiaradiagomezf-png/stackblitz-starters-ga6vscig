@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box; /*se ajusta al tamaño del contenido*/
+  box-sizing: border-box;
+  /*se ajusta al tamaño del contenido*/
 }
 
 body {
@@ -8,22 +9,27 @@ body {
   color: black;
   background-color: white;
 }
+
 /*inicio del header*/
 header {
   background-color: black;
 }
+
 #logos {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
 }
+
 #copa img {
   width: 100px;
 }
+
 #fifa img {
   width: 191px;
 }
+
 /*fin del header*/
 /*inicio nav*/
 
@@ -54,9 +60,11 @@ nav a [aria-current='page'] {
   color: #000;
   background-color: #d4d4d4;
 }
+
 .activo {
   box-shadow: 5px 5px lightgray;
 }
+
 /*fin nav*/
 /*inicio main*/
 section {
@@ -69,12 +77,14 @@ section {
   align-items: center;
   justify-content: center;
 }
+
 section div {
   width: 300px;
-  height:170px;
+  height: 170px;
   background-color: yellow;
   margin: 5px;
 }
+
 #intro {
   background-image: url(https://i.pinimg.com/736x/be/47/74/be47743249f0e88d93da0e17520681fd.jpg);
   /* background-repeat: no-repeat;
@@ -84,16 +94,19 @@ background-position: center;
   box-shadow: 5px 3px gray;
   border-radius: 15px;
 }
+
 #eeuu {
   background-image: url(../img/banderaeeuu\ \(1\).png);
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 #mx {
   background-image: url(../img/banderamex.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 #can {
   background-image: url(../img/banderacan.svg);
   background-repeat: no-repeat;
@@ -103,7 +116,9 @@ background-position: center;
 
 /*fin main*/
 /*comienzo de estadios*/
-table, td, th{
+table,
+td,
+th {
   background-color: solid red 8px;
 }
 
@@ -116,31 +131,38 @@ footer {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
 #colegio {
   width: 33%;
   background-color: red;
   padding: 5px;
 }
+
 #colegio a {
   color: #d4d4d4;
 }
+
 #alumno {
   width: 33%;
   background-color: yellow;
   color: #aaa;
   padding: 5px;
 }
+
 #alumno a {
   color: #aaa;
 }
+
 #sociales {
   width: 33%;
   background-color: lightblue;
   padding: 5px;
 }
+
 #sociales img {
   width: 45px;
 }
+
 /* fin del footer*/
 
 main {
@@ -152,7 +174,7 @@ h1 {
   font-size: 1.5rem;
 }
 
-.multimedia{
+.multimedia {
   width: 800px;
   background-color: plum;
 
@@ -161,32 +183,98 @@ h1 {
 .multimedia video {
   width: 600px;
 }
+
 /*estadios*/
-#estadosunidos,#estadosunidos tr,#estadosunidos td,#estadosunidos th{
+#estadosunidos,
+#estadosunidos tr,
+#estadosunidos td,
+#estadosunidos th {
   border: solid plum 3px;
   border-collapse: collapse;
 }
-#estadosunidos img{
+
+#estadosunidos img {
   width: 200px;
 }
-#canada,#canada tr,#canada td,#canada th{
+
+#canada,
+#canada tr,
+#canada td,
+#canada th {
   border: solid plum 3px;
   border-collapse: collapse;
 }
-#canada img{
+
+#canada img {
   width: 200px;
 }
-#mexico,#mexico tr,#mexico td,#mexico th{
+
+#mexico,
+#mexico tr,
+#mexico td,
+#mexico th {
   border: solid plum 3px;
   border-collapse: collapse;
 }
-#mexico img{
+
+#mexico img {
   width: 200px;
 }
-#campeones,#campeones tr,#campeones td,#campeones th{
-  border: solid plum 3px;
-  border-collapse: collapse;
+
+/*estadios*/
+
+/*campeones******/
+/****** /* Contenedor principal: Divide el diseño en dos columnas (Continentes y Paises)*/
+.campeones {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  /* 25% para continente, 75% para países */
+  border: 2px solid #000;
+  width: 100px;
 }
-#campeones img{
-  width: 200px;
+
+/* Columna izquerda: Continente ocupará todo el alto disponible automáticamente*/
+.continente {
+  border-right: 2px #000;
+  padding: 15px 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/*Columna derecha: Se convierte en otro Gridpara organizar el contenido interno*/
+.paises {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Divido en 2 columnas para las fotos*/
+}
+
+/* El título del País ocupa las dos columnas*/
+.pais {
+  grid-column: span 2;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 13px;
+  border-bottom: 2px solid #000;
+}
+
+/*Las fotos   se acomodan una al lado de la otra automáticamente (50% cada una)*/
+.foto {
+  min-height: 120px;
+  /* Espacio para la imagen */
+  padding: 35px 10px 10px 10px;
+  font-size: 11px;
+  border-bottom: 2px solid #000;
+}
+
+/* Borde vertical divisor solo en la primera foto*/
+.foto:nth-of-type(odd) {
+  border-right: 2px solid #000;
+}
+
+/*La reseña se salta al fondo ocupando las dos columnas*/
+.resenia {
+  grid-column: span 2;
+  padding: 10 px;
+  min-height: 80px;
+  font-size: 11px;
 }
